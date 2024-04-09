@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs12tjn2jj0l7"]
+
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_8065l"]
+[ext_resource type="Script" path="res://TileMap.gd" id="2_6w4yv"]
+[ext_resource type="Script" path="res://Scripts/CitManager.gd" id="2_mqwgj"]
+
+[sub_resource type="TileSet" id="TileSet_stkmv"]
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource("1_8065l")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_stkmv")
+format = 2
+script = ExtResource("2_6w4yv")
+
+[node name="CitManager" type="Node" parent="."]
+script = ExtResource("2_mqwgj")

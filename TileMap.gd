@@ -1,13 +1,5 @@
 extends TileMap
 
-<<<<<<< HEAD
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-=======
 var noise: FastNoiseLite
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -36,7 +28,7 @@ func determine_tile_index(value: float) -> Vector2:
 		return Vector2(3,0)
 	else:
 		return Vector2(2,1)
->>>>>>> bae52ec11b5541669e96c052b3cf320ad961bdc2
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
