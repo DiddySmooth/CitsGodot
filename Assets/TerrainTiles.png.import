@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhn6q8abtlptm"
-path="res://.godot/imported/TerrainTiles.png-dc072856c1439819a3bc5132f2c5e977.ctex"
+path="res://.godot/imported/TerrainTiles.png-59370f6f2161265d37d6cc2e442ee84b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://TerrainTiles.png"
-dest_files=["res://.godot/imported/TerrainTiles.png-dc072856c1439819a3bc5132f2c5e977.ctex"]
+source_file="res://Assets/TerrainTiles.png"
+dest_files=["res://.godot/imported/TerrainTiles.png-59370f6f2161265d37d6cc2e442ee84b.ctex"]
 
 [params]
 

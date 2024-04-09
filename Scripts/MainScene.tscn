@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://buevgpv13yi1i"]
+
+[ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_tpyxj"]
+[ext_resource type="Script" path="res://TileMap.gd" id="2_8unph"]
+[ext_resource type="Texture2D" uid="uid://dhn6q8abtlptm" path="res://Assets/TerrainTiles.png" id="2_sooqu"]
+[ext_resource type="Script" path="res://Scripts/CitManager.gd" id="3_2imp8"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v0v02"]
+texture = ExtResource("2_sooqu")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_stkmv"]
+sources/0 = SubResource("TileSetAtlasSource_v0v02")
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource("1_tpyxj")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_stkmv")
+format = 2
+layer_0/tile_data = PackedInt32Array(65535, 0, 0, 131071, 0, 0, 65536, 0, 0, 65537, 0, 0, 65538, 0, 0, 2, 0, 0, -65534, 0, 0, -65535, 0, 0, -131071, 0, 0, -131072, 0, 0, -65537, 0, 0, -65538, 0, 0, -2, 0, 0, 65534, 0, 0, 1, 0, 0, -65536, 0, 0, -1, 0, 0, 0, 0, 0, 131070, 0, 0)
+script = ExtResource("2_8unph")
+
+[node name="CitManager" type="Node" parent="."]
+script = ExtResource("3_2imp8")
