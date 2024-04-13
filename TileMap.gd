@@ -8,7 +8,7 @@ func _ready():
 
 func generateMap():
 	noise = FastNoiseLite.new()
-	noise.seed = 123
+	noise.seed = randi_range(1, 1000)
 	noise.frequency = 0.009
 	noise.fractal_octaves = 4
 	noise.fractal_lacunarity = 2.0
