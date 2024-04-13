@@ -2,11 +2,10 @@ class_name Cit
 
 extends Node
 
-
-
-
 var citName
 var citRace
+var citJob
+
 var citStr
 var citDex 
 var citCon
@@ -26,6 +25,10 @@ func generateStats():
 	citWis = randi_range(8, 20)
 	citInt = randi_range(8, 20)
 	citCha = randi_range(8, 20)
+
+func generateName():
+	citName = "Grayson"
+
 
 func getStats():
 	print(citStr)
