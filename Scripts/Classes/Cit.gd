@@ -28,7 +28,12 @@ func generateStats():
 
 func generateName():
 	citName = "Grayson"
-
+	
+func load_file(file_path: String) -> String:
+	var file = FileAccess.new()
+	file.open(file_path, File.READ)
+	var text = file.get_as_text()
+	return text
 
 func getStats():
 	print(citStr)
