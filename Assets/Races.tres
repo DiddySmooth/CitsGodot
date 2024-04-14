@@ -1,0 +1,6 @@
+[gd_resource type="JSON" format=3 uid="uid://djkwn6n2pfio4"]
+
+[resource]
+data = {
+"Name": "Human"
+}

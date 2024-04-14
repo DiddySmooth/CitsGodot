@@ -5,6 +5,7 @@ extends Node
 var citName
 var citRace
 var citJob
+var citAge
 
 var citStats = {
 	"str": 0,
@@ -15,8 +16,14 @@ var citStats = {
 	"cha": 0,
 }
 
+func generateAge():
+	var file = FileAccess.open("res://Assets/Races.txt", FileAccess.READ)
+	pass
 
-func _ready():
+func ageUp():
+	pass
+
+func generate():
 	generateStats()
 	generateName()
 	
