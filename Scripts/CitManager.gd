@@ -1,6 +1,6 @@
 extends Node
 
-var custom_instance = preload("res://Scripts/Classes/Cit.gd").new()
+var citManager = preload("res://Scripts/Classes/Cit.gd").new()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -11,9 +11,7 @@ func createStarterCits():
 	pass
 
 func createCit():
-	custom_instance.generateStats()
-	print(custom_instance.getStats())
-	custom_instance.generateName()
+	citManager.generate()
 	pass
 
 

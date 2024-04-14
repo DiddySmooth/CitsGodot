@@ -3,7 +3,7 @@ class_name Cit
 extends Node
 
 var citName
-var citRace
+var citRace = "human"
 var citJob
 var citAge
 
@@ -17,8 +17,21 @@ var citStats = {
 }
 
 func generateAge():
-	var file = FileAccess.open("res://Assets/Races.txt", FileAccess.READ)
+	getRaceAge(citRace)
 	pass
+
+func getRaceAge(raceName):
+	var file = FileAccess.get_file_as_string("res://Assets/Races.json")
+	if file:
+		var result = JSON.parse_string(file)
+		for race in result:
+			if race.has("name") and race["name"] == raceName:
+				return(race.name)
+				break
+		
+	else:
+		print("Failed to load Race.tres")
+
 
 func ageUp():
 	pass
@@ -26,6 +39,7 @@ func ageUp():
 func generate():
 	generateStats()
 	generateName()
+	generateAge()
 	
 func generateStats():
 	randomize()
@@ -53,7 +67,7 @@ func generateName():
 		else:
 			print("The file is empty or contains no valid names.")
 	else:
-		print("Failed to open the file.")
+		print("Failed to open Names.txt")
 	
 func getStats():
 	return(citStats)
