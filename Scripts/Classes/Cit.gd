@@ -6,39 +6,49 @@ var citName
 var citRace
 var citJob
 
-var citStr
-var citDex 
-var citCon
-var citInt
-var citWis
-var citCha
+var citStats = {
+	"str": 0,
+	"dex": 0,
+	"con": 0,
+	"int": 0,
+	"wis": 0,
+	"cha": 0,
+}
+
 
 func _ready():
 	generateStats()
-	
+	generateName()
 	
 func generateStats():
 	randomize()
-	citStr = randi_range(8, 20)
-	citDex = randi_range(8, 20)
-	citCon = randi_range(8, 20)
-	citWis = randi_range(8, 20)
-	citInt = randi_range(8, 20)
-	citCha = randi_range(8, 20)
+	citStats.str = randi_range(8, 20)
+	citStats.dex = randi_range(8, 20)
+	citStats.con = randi_range(8, 20)
+	citStats.int = randi_range(8, 20)
+	citStats.wis = randi_range(8, 20)
+	citStats.cha = randi_range(8, 20)
 
 func generateName():
-	citName = "Grayson"
+	var file = FileAccess.open("res://Assets/Names.txt", FileAccess.READ)
+	if file:
+		var names = []
+		while not file.eof_reached():
+			var line = file.get_line().strip_edges()
+			if line != "":
+				names.append(line)
+		file.close()
+		
+		if names.size() > 0:
+			var random_index = randi() % names.size()
+			var random_name = names[random_index]
+			citName = random_name
+		else:
+			print("The file is empty or contains no valid names.")
+	else:
+		print("Failed to open the file.")
 	
-func load_file(file_path: String) -> String:
-	var file = FileAccess.new()
-	file.open(file_path, File.READ)
-	var text = file.get_as_text()
-	return text
-
 func getStats():
-	print(citStr)
-	print(citDex)
-	print(citCon)
-	print(citInt)
-	print(citWis)
-	print(citCha)
+	return(citStats)
+
+
