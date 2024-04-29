@@ -5,13 +5,13 @@ var starterNumber = 6
 var cits = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print(createCit().citName)
+	createStarterCits()
+	print(cits)
 	pass # Replace with function body.
 
 func createStarterCits():
 	for i in range(starterNumber):
-		createCit()
-	pass
+		cits.append(createCit())
 
 func createCit():
 	var cit = preload("res://Scripts/Classes/Cit.gd").new()
