@@ -1,7 +1,0 @@
-[gd_resource type="JSON" format=3 uid="uid://bbt5jyquqmslt"]
-
-[resource]
-data = [{
-"MaxAge": 120.0,
-"Name": "Human"
-}]

@@ -1,17 +1,23 @@
 extends Node
 
-var citManager = preload("res://Scripts/Classes/Cit.gd").new()
 
+var starterNumber = 6
+var cits = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	createCit()
+	print(createCit().citName)
 	pass # Replace with function body.
 
 func createStarterCits():
+	for i in range(starterNumber):
+		createCit()
 	pass
 
 func createCit():
-	citManager.generate()
+	var cit = preload("res://Scripts/Classes/Cit.gd").new()
+	cit.generate()
+	print(cit.citName)
+	return cit
 	pass
 
 

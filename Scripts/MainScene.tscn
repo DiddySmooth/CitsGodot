@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://buevgpv13yi1i"]
+[gd_scene load_steps=8 format=3 uid="uid://buevgpv13yi1i"]
 
 [ext_resource type="Script" path="res://Scripts/GameManager.gd" id="1_tpyxj"]
 [ext_resource type="Script" path="res://TileMap.gd" id="2_8unph"]
 [ext_resource type="Texture2D" uid="uid://dhn6q8abtlptm" path="res://Assets/TerrainTiles.png" id="2_sooqu"]
 [ext_resource type="Script" path="res://Scripts/CitManager.gd" id="3_2imp8"]
+[ext_resource type="Script" path="res://Scripts/UIManager.gd" id="5_hnm5u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v0v02"]
 texture = ExtResource("2_sooqu")
@@ -34,3 +35,16 @@ script = ExtResource("2_8unph")
 
 [node name="CitManager" type="Node" parent="."]
 script = ExtResource("3_2imp8")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_hnm5u")
+
+[node name="GridContainer" type="GridContainer" parent="Control"]
+layout_mode = 0
+offset_right = 191.0
+offset_bottom = 336.0
+columns = 3

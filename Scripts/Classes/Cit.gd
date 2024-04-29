@@ -3,7 +3,7 @@ class_name Cit
 extends Node
 
 var citName
-var citRace = "human"
+var citRace = "Human"
 var citJob
 var citAge
 
@@ -17,7 +17,9 @@ var citStats = {
 }
 
 func generateAge():
-	getRaceAge(citRace)
+	var maxAge = int(getRaceAge(citRace))
+	citAge = randi() % maxAge
+	print(citAge)
 	pass
 
 func getRaceAge(raceName):
@@ -25,8 +27,8 @@ func getRaceAge(raceName):
 	if file:
 		var result = JSON.parse_string(file)
 		for race in result:
-			if race.has("name") and race["name"] == raceName:
-				return(race.name)
+			if race.has("Name") and race.Name == raceName:
+				return(race.MaxAge)
 				break
 		
 	else:
