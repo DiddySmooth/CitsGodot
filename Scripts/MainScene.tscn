@@ -48,3 +48,6 @@ layout_mode = 0
 offset_right = 191.0
 offset_bottom = 336.0
 columns = 3
+
+[node name="Camera2D" type="Camera2D" parent="Control"]
+position = Vector2(575, 326)
