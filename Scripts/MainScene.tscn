@@ -39,15 +39,15 @@ script = ExtResource("3_2imp8")
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 83.0
+offset_bottom = 79.0
 script = ExtResource("5_hnm5u")
 
 [node name="GridContainer" type="GridContainer" parent="Control"]
 layout_mode = 0
-offset_right = 191.0
-offset_bottom = 336.0
+offset_right = 1153.0
+offset_bottom = 647.0
 columns = 3
 
 [node name="Camera2D" type="Camera2D" parent="Control"]
-position = Vector2(575, 326)
+position = Vector2(575, 325)
