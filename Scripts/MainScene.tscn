@@ -51,3 +51,18 @@ columns = 3
 
 [node name="Camera2D" type="Camera2D" parent="Control"]
 position = Vector2(575, 325)
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 566.0
+offset_right = 638.0
+offset_bottom = 597.0
+text = "Test Button"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="button_down" from="Control/Button" to="CitManager" method="addCit"]
+[connection signal="timeout" from="Timer" to="." method="moveGameForward"]
