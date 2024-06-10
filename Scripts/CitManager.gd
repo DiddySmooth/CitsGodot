@@ -6,7 +6,7 @@ var cits = []
 var controlNode
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	controlNode = get_parent().get_node("Control")
+	controlNode = get_parent().get_node("CanvasLayer").get_node("Control")
 	
 	print(controlNode)
 	createStarterCits()
