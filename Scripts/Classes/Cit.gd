@@ -36,6 +36,7 @@ func getRaceAge(raceName):
 
 
 func ageUp():
+	checkIfDead()
 	pass
 
 func generate():
@@ -74,4 +75,30 @@ func generateName():
 func getStats():
 	return(citStats)
 
+
+func checkIfDead(): 
+	var agePercent = (citAge / citRace.MaxAge) * 100
+	
+	var mortality_rate
+	if citAge < 0:
+		return "Invalid age"
+	elif citAge <= 1:
+		mortality_rate = 0.4  # 40% mortality rate
+	elif citAge <= 5:
+		mortality_rate = 0.25  # 25% mortality rate
+	elif citAge <= 15:
+		mortality_rate = 0.15  # 15% mortality rate
+	elif citAge <= 45:
+		mortality_rate = 0.2  # 20% mortality rate
+	elif citAge <= 60:
+		mortality_rate = 0.3  # 30% mortality rate
+	elif citAge <= 75:
+		mortality_rate = 0.4  # 40% mortality rate
+	elif citAge <= 85:
+		mortality_rate = 0.5  # 50% mortality rate
+	elif citAge <= 100:
+		mortality_rate = 0.6  # 60% mortality rate
+	else:
+		mortality_rate = 0.7  # 70% mortality rate for those over 100
+	
 
